@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="producerApp">
+
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Producer</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	</head>
+
+	<body>
+
+		<div ng-controller="producerCtrl">
+			<form name="produceForm" ng-submit="produce()">
+				<h2>Message</h2>
+				<p><textarea ng-model="message" name="message" rows="25" cols="40" required></textarea></p>
+				<p><button type="submit" ng-disabled="produceForm.$pristine || !produceForm.$dirty">Produce</button></p>
+			</form>
+			<div>{{feedback}}</div>
+		</div>
+
+
+		<script src="js/producerApp.js"></script>
+		<script src="js/producerCtrl.js"></script>
+
+	</body>
+
+</html>

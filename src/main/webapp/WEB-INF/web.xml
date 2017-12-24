@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee	web-app_3_1.xsd"
+	version="3.1">
+	
+	<display-name>Ozgur Testing Sandbox</display-name>
+	
+	<servlet>
+		<servlet-name>JmsProducerServlet</servlet-name>
+		<servlet-class>com.oz.servlet.JmsProducerServlet</servlet-class>
+		<async-supported>true</async-supported>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>JmsProducerServlet</servlet-name>
+		<url-pattern>/JPS/*</url-pattern>
+	</servlet-mapping>
+	
+	<session-config>
+		<session-timeout>60</session-timeout>	<!-- minutes -->
+	</session-config>
+</web-app>
